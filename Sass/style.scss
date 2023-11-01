@@ -1,6 +1,8 @@
-$body-background : #F6F6F6;
-$primary-color: ;
-$secondary-color: ;
+$body-bg : #F6F6F6;
+$primary-color : #FFFFFF;
+$secondary-color : #EAEAEA;
+$text-color : #000000;
+$footer-bg : #353535;
 
 * {
     margin: 0;
@@ -14,3 +16,14 @@ body{
 
 /* HEADER */
 
+header{
+    height: 113px;
+    .header__title{
+        height: 63px;
+        background-color: $primary-color;
+    }
+    .header__location{
+        height: 50px;
+        background-color: $secondary-color;
+    }
+}

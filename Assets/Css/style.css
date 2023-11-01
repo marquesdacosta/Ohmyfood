@@ -1,17 +1,23 @@
-/* Error: Expected expression.
- *   ,
- * 2 | $primary-color: ;
- *   |                 ^
- *   '
- *   sass\style.scss 2:17  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a   \2577 \a 2 \2502  $primary-color: ;\d\a   \2502                  ^\a   \2575 \a   sass\\style.scss 2:17  root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  width: 100%;
+}
+
+/* HEADER */
+header {
+  height: 113px;
+}
+header .header__title {
+  height: 63px;
+  background-color: #FFFFFF;
+}
+header .header__location {
+  height: 50px;
+  background-color: #EAEAEA;
+}
+
+/*# sourceMappingURL=style.css.map */

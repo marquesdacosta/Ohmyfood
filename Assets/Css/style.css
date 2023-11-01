@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -38,11 +39,71 @@ body {
 .header__content {
   font-size: 16px;
   color: #353535;
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 .header__location {
   color: #353535;
+}
+
+/* MAIN */
+/* SECTION DECOUVERTE */
+.section-decouverte {
+  box-sizing: border-box;
+  padding: 50px 0;
+  width: 100%;
+  height: 287px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-decouverte__title {
+  font-weight: 700;
+  width: 275px;
+  height: 68px;
+  text-align: center;
+}
+.section-decouverte__content {
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  color: #353535;
+  width: 315px;
+  height: 46px;
+}
+.section-decouverte__button {
+  margin-top: 23px;
+  height: 50px;
+  width: 218px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  border: none;
+}
+
+/* SECTION FONCTIONNEMENT */
+.section-fonctionnement {
+  width: 100%;
+  height: 440px;
+  border: blue solid 1px;
+  box-sizing: border-box;
+  padding: 50px 20px;
+}
+
+/* SECTION RESTAURANTS */
+.section-restaurants {
+  width: 100%;
+  height: 1226px;
+  border: 1px solid orange;
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  height: 186px;
+  border: solid green 1px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -136,8 +136,13 @@ body {
   font-size: 16px;
   font-weight: 500;
 }
-.btn__content i {
+
+.section-decouverte__icone {
   color: #7E7E7E;
+  align-self: center;
+}
+.section-decouverte__icone--pink {
+  color: #9356DC;
   align-self: center;
 }
 

@@ -58,7 +58,7 @@ body {
 }
 .section-decouverte__title {
   font-weight: 700;
-  width: 275px;
+  width: 90%;
   height: 68px;
   text-align: center;
 }
@@ -67,7 +67,7 @@ body {
   font-size: 18px;
   text-align: center;
   color: #353535;
-  width: 315px;
+  width: 90%;
   height: 46px;
 }
 .section-decouverte__button {
@@ -75,12 +75,17 @@ body {
   height: 50px;
   width: 218px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   font-weight: 500;
   font-size: 16px;
   color: #FFFFFF;
   border: none;
+  transition: all 300ms linear;
+}
+.section-decouverte__button:hover {
+  opacity: 0.8;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* SECTION FONCTIONNEMENT */
@@ -111,30 +116,34 @@ body {
   border-radius: 20px;
   background-color: #F6F6F6;
   border: none;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  transition: all 300ms linear;
 }
 .btn__number {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
   display: flex;
-  right: 320px;
-  top: 22px;
-  position: absolute;
   width: 24px;
   height: 24px;
   box-sizing: border-box;
   background-color: #9356DC;
   font-size: 14px;
   color: #FFFFFF;
+  transform: translate(-50%, 40%);
 }
 .btn__content {
   display: flex;
   justify-content: space-evenly;
+  transform: translateY(-50%);
 }
 .btn__content p {
   font-size: 16px;
   font-weight: 500;
+}
+.btn:hover {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
 }
 
 .section-decouverte__icone {
@@ -203,16 +212,27 @@ body {
   align-items: center;
   height: 65px;
   width: 20%;
+  position: relative;
 }
-.card__content__like i {
-  position: absolute;
-}
-.card__content__like .full-heart::before {
-  color: transparent;
-  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-background-clip: text;
-  background-clip: text;
+.card__content__like:hover .empty-heart {
   opacity: 0;
+}
+.card__content__like:hover .full-heart {
+  opacity: 1;
+}
+
+.full-heart {
+  position: absolute;
+  width: 22px;
+  fill: url(#my-gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.empty-heart {
+  position: absolute;
+  width: 22px;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* FOOTER */
@@ -249,6 +269,34 @@ body {
   display: inline-block;
   display: flex;
   align-items: center;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .section-fonctionnement {
+    padding: 50px 100px;
+  }
+  .section-restaurants {
+    padding: 50px 100px;
+  }
+  .footer {
+    padding: 20px 100px;
+  }
+  .card__content__info {
+    width: 90%;
+  }
+  .card__content__like {
+    width: 10%;
+  }
+}
+@media (min-width: 1025px) {
+  .section-fonctionnement {
+    height: 228px;
+  }
+  .section-fonctionnement__group-btn {
+    height: 72px;
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

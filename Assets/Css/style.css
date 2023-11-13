@@ -359,6 +359,14 @@ a {
   }
 }
 @media (min-width: 1025px) {
+  .spin {
+    width: 200px;
+    height: 200px;
+  }
+  .spin:after {
+    width: 200px;
+    height: 200px;
+  }
   .section-fonctionnement {
     height: 228px;
     padding: 50px 12.5%;

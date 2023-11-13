@@ -4,6 +4,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
 h2 {
   font-size: 16px;
   font-weight: 300;
@@ -23,6 +28,80 @@ hr {
   border: none;
 }
 
+/* LOADER */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  opacity: 0.7;
+  inset: 0;
+  z-index: 1;
+  animation: loader 3000ms linear 0s 1 normal forwards;
+}
+
+@keyframes loader {
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.spin {
+  border-radius: 50%;
+  border: 15px solid black;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  position: relative;
+}
+
+.spin:after {
+  content: "";
+  position: absolute;
+  inset: -15px;
+  width: 50px;
+  height: 50px;
+  border: solid 15px transparent;
+  border-radius: 50%;
+  border-top-color: #9356DC;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+    border-top-color: #9356DC;
+  }
+  25% {
+    border-top-color: #FF79DA;
+  }
+  50% {
+    border-top-color: #9356DC;
+  }
+  75% {
+    border-top-color: #FF79DA;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top-color: #9356DC;
+  }
+}
+@media (min-width: 1025px) {
+  .spin {
+    width: 200px;
+    height: 200px;
+  }
+  .spin:after {
+    width: 200px;
+    height: 200px;
+  }
+}
 /* HEADER */
 .header {
   background-color: #FFFFFF;
@@ -91,6 +170,7 @@ hr {
   font-family: "Shrikhand", serif;
 }
 .menu__button {
+  cursor: pointer;
   align-self: center;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
@@ -101,9 +181,15 @@ hr {
   font-weight: 500;
   font-size: 16px;
   color: #FFFFFF;
+  transition: all 300ms linear;
+}
+.menu__button:hover {
+  opacity: 0.8;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .title-like {
+  cursor: pointer;
   width: 15%;
   display: flex;
   align-items: center;
@@ -130,6 +216,7 @@ hr {
 }
 
 .card {
+  cursor: pointer;
   overflow: hidden;
   background-color: #FFFFFF;
   display: flex;

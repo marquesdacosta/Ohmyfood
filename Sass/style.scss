@@ -196,6 +196,7 @@ a {
         display: flex;
         flex-direction: column;
         gap: 30px;
+        margin-left: 10px;
     }
     &__title {
         font-weight: 700;
@@ -271,11 +272,27 @@ a {
     box-sizing: border-box;
     &__image {
         height: 186px;
+        position: relative;
         & img {
             border-radius: 15px 15px 0 0 ;
             height: 186px;
             width: 100%;
             object-fit: cover;
+        }
+        &__badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #99E2D0;
+            color: #008766;
+            width: 80px;
+            height: 29px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 14px;
         }
     }
     &__content {

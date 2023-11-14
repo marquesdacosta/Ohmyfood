@@ -137,6 +137,7 @@ hr {
 
 .background {
     position: relative;
+    z-index: -1;
     height: 275px;
     & img {
         object-fit: cover;
@@ -152,11 +153,11 @@ hr {
     flex-direction: column;
     box-sizing: border-box;
     width: 100%;
-    position: absolute;
-    top: 25%;
     background-color: $body-bg;
     border-radius: 30px 30px 0 0;
     gap: 40px;
+    padding-bottom: 30px;
+    margin-top: -60px;
     &__entree {
         padding: 0px 15px;
         display: flex;
@@ -237,6 +238,7 @@ hr {
 
 .card {
     cursor: pointer;
+    height: 69px;
     overflow: hidden;
     background-color: $primary-color;
     display: flex;
@@ -277,8 +279,10 @@ hr {
         align-items: center;
         border-radius: 0px 15px 15px 0px;
         padding: 20px;
-        margin-right: -60px;
+        margin-right: -70px;
         transition: all 500ms;
+        justify-content: center;
+        width: 30px;
     }
 }
 
@@ -330,5 +334,72 @@ hr {
         display: inline-block;
         display: flex;
         align-items: center;
+    }
+}
+
+/* RESPONSIVE */ 
+
+
+@media (min-width: 768px)  {
+    .header {
+        gap: 200px;
+    }
+    .menu {
+        padding-left: 35px;
+        padding-right: 35px;
+        &__title {
+            justify-content: center;
+        }
+    }
+    .footer {
+        padding: 22px 60px;
+        height: 114px;
+        &__info {
+            flex-direction: row;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .background {
+        height: 383px;
+    }
+    .header {
+        gap: 35%;
+    }
+    .menu {
+        margin: auto;
+        margin-top: -30px;
+        max-width: 1055px;
+        width: 80%;
+        &__title {
+            margin-left: 50px;
+        }
+        &__entree {
+            width: 62%;
+            margin: auto;
+        }
+        &__plat {
+            width: 62%;
+            margin: auto;
+        }
+        &__desserts {
+            width: 62%;
+            margin: auto;
+        }
+    }
+    .footer {
+        gap: 80px;
+        flex-direction: row-reverse;
+        &__info {
+            gap: 30px;
+        }
+        &__logo {
+            display: flex;
+            align-items: center;
+            & p {
+                text-align: end;
+            }
+        }
     }
 }

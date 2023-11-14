@@ -174,6 +174,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-left: 10px;
 }
 .section-fonctionnement__title {
   font-weight: 700;
@@ -248,12 +249,28 @@ a {
 }
 .card__image {
   height: 186px;
+  position: relative;
 }
 .card__image img {
   border-radius: 15px 15px 0 0;
   height: 186px;
   width: 100%;
   object-fit: cover;
+}
+.card__image__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #99E2D0;
+  color: #008766;
+  width: 80px;
+  height: 29px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
 }
 .card__content {
   display: flex;

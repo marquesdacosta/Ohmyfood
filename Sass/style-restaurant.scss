@@ -5,6 +5,10 @@ $text-color : #000000;
 $footer-bg : #353535;
 $btn-color : #9356DC;
 
+html {
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -34,6 +38,13 @@ hr {
     border: none;
 }
 
+.stopcolor-0 {
+    stop-color: #9356DC;
+}
+.stopcolor-100 {
+    stop-color: #FF79DA;
+}
+
 /* LOADER */
 
 .loader {
@@ -47,7 +58,7 @@ hr {
     opacity: 0.7;
     inset: 0;
     z-index: 1;
-    animation: loader 3000ms linear 0s 1 normal forwards;
+    animation: loader 1500ms linear 0s 1 normal forwards;
 }
 
 @keyframes loader {
@@ -108,16 +119,6 @@ hr {
     }
 }
 
-@media (min-width: 1025px) {
-    .spin {
-        width: 200px;
-        height: 200px;
-    }
-    .spin:after {
-        width: 200px;
-        height: 200px;
-    }
-}
 
 /* HEADER */ 
 
@@ -163,18 +164,24 @@ hr {
         display: flex;
         flex-direction: column;
         gap: 12px;
+        animation: fade 1s 1.5s forwards;
+        opacity: 0;
     }
     &__plat {
         padding: 0px 15px;
         display: flex;
         flex-direction: column;
         gap: 12px;
+        animation: fade 1s 2s forwards;
+        opacity: 0;
     }
     &__desserts {
         padding: 0px 15px;
         display: flex;
         flex-direction: column;
         gap: 12px;
+        animation: fade 1s 2.5s forwards;
+        opacity: 0;
     }
     &__title {
         padding: 30px 15px 0px 15px;
@@ -361,6 +368,14 @@ hr {
 }
 
 @media (min-width: 1025px) {
+    .spin {
+        width: 200px;
+        height: 200px;
+    }    
+    .spin:after {
+        width: 200px;
+        height: 200px;
+    }
     .background {
         height: 383px;
     }
@@ -401,5 +416,20 @@ hr {
                 text-align: end;
             }
         }
+    }
+}
+
+
+/* Animation */ 
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

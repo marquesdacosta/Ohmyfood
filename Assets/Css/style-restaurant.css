@@ -40,70 +40,6 @@ hr {
   stop-color: #FF79DA;
 }
 
-/* LOADER */
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  background-color: #FFFFFF;
-  opacity: 0.7;
-  inset: 0;
-  z-index: 1;
-  animation: loader 1500ms linear 0s 1 normal forwards;
-}
-
-@keyframes loader {
-  90% {
-    opacity: 0.7;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-.spin {
-  border-radius: 50%;
-  border: 15px solid #000000;
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  position: relative;
-}
-
-.spin:after {
-  content: "";
-  position: absolute;
-  inset: -15px;
-  width: 50px;
-  height: 50px;
-  border: solid 15px transparent;
-  border-radius: 50%;
-  border-top-color: #9356DC;
-  animation: spinner 1s linear infinite;
-}
-
-@keyframes spinner {
-  0% {
-    transform: rotate(0deg);
-    border-top-color: #9356DC;
-  }
-  25% {
-    border-top-color: #FF79DA;
-  }
-  50% {
-    border-top-color: #9356DC;
-  }
-  75% {
-    border-top-color: #FF79DA;
-  }
-  100% {
-    transform: rotate(360deg);
-    border-top-color: #9356DC;
-  }
-}
 /* HEADER */
 .header {
   background-color: #FFFFFF;
@@ -147,7 +83,7 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  animation: fade 1s 1.5s forwards;
+  animation: fade 1s forwards;
   opacity: 0;
 }
 .menu__plat {
@@ -155,7 +91,7 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  animation: fade 1s 2s forwards;
+  animation: fade 1s 0.5s forwards;
   opacity: 0;
 }
 .menu__desserts {
@@ -163,7 +99,7 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  animation: fade 1s 2.5s forwards;
+  animation: fade 1s 1s forwards;
   opacity: 0;
 }
 .menu__title {
@@ -238,7 +174,6 @@ hr {
 .card__price {
   padding: 10px;
   align-self: flex-end;
-  transition: all 500ms;
 }
 .card__price p {
   font-weight: 700;
@@ -264,22 +199,18 @@ hr {
   overflow: hidden;
 }
 .card__check {
-  background-color: #99E2D0;
   display: flex;
+  justify-content: center;
   align-items: center;
+  background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   padding: 20px;
   margin-right: -70px;
   transition: all 500ms;
-  justify-content: center;
   width: 30px;
-}
-.card:hover .card__price {
-  transition: all 500ms;
 }
 .card:hover .card__check {
   margin-right: 0px;
-  transition: all 500ms;
 }
 
 .fa-circle-check {

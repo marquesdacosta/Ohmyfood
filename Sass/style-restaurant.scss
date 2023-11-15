@@ -49,78 +49,6 @@ hr {
     stop-color: $btn-color-2;
 }
 
-/* LOADER */
-
-.loader {
-    @include flex-center;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    background-color: $primary-color;
-    opacity: 0.7;
-    inset: 0;
-    z-index: 1;
-    animation: loader 1500ms linear 0s 1 normal forwards;
-}
-
-@keyframes loader {
-    0% {}
-
-    90% {
-        opacity: 0.7;
-    }
-
-    100% {
-        visibility: hidden;
-        opacity: 0;
-    }
-}
-
-.spin {
-    border-radius: 50%;
-    border: 15px solid $text-color;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    position: relative;
-}
-
-.spin:after {
-    content: "";
-    position: absolute;
-    inset: -15px;
-    width: 50px;
-    height: 50px;
-    border: solid 15px transparent;
-    border-radius: 50%;
-    border-top-color: $btn-color;
-    animation: spinner 1s linear infinite;
-}
-
-@keyframes spinner {
-    0% {
-        transform: rotate(0deg);
-        border-top-color: $btn-color;
-    }
-
-    25% {
-        border-top-color: $btn-color-2;
-    }
-
-    50% {
-        border-top-color: $btn-color;
-    }
-
-    75% {
-        border-top-color: $btn-color-2;
-    }
-
-    100% {
-        transform: rotate(360deg);
-        border-top-color: $btn-color;
-    }
-}
-
 
 /* HEADER */ 
 
@@ -167,7 +95,7 @@ hr {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        animation: fade 1s 1.5s forwards;
+        animation: fade 1s forwards;
         opacity: 0;
     }
     &__plat {
@@ -175,7 +103,7 @@ hr {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        animation: fade 1s 2s forwards;
+        animation: fade 1s 0.5s forwards;
         opacity: 0;
     }
     &__desserts {
@@ -183,7 +111,7 @@ hr {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        animation: fade 1s 2.5s forwards;
+        animation: fade 1s 1s forwards;
         opacity: 0;
     }
     &__title {
@@ -258,7 +186,6 @@ hr {
     &__price {
         padding: 10px;
         align-self: flex-end;
-        transition: all 500ms;
         & p {
             font-weight: 700;
             font-size: 15px;
@@ -284,22 +211,16 @@ hr {
         }
     }
     &__check {
+        @include flex-center;
         background-color: #99E2D0;
-        display: flex;
-        align-items: center;
         border-radius: 0px 15px 15px 0px;
         padding: 20px;
         margin-right: -70px;
         transition: all 500ms;
-        justify-content: center;
         width: 30px;
-    }
-    &:hover .card__price {
-        transition: all 500ms;
     }
     &:hover .card__check {
         margin-right: 0px;
-        transition: all 500ms;
     }
 }
 

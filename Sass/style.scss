@@ -23,6 +23,14 @@ a {
     color: $text-color;
 }
 
+.stopcolor-0 {
+    stop-color: $btn-color;
+}
+
+.stopcolor-100 {
+    stop-color: $btn-color-2;
+}
+
 /* LOADER */
 
 .loader {
@@ -89,6 +97,7 @@ a {
         border-top-color: $btn-color;
     }
 }
+
 
 /* HEADER */
 
@@ -172,10 +181,6 @@ a {
         }
     }
 }
-
-
-
-
 
 
 /* SECTION FONCTIONNEMENT */ 
@@ -397,6 +402,9 @@ a {
 }
 
 @media (min-width: 1025px) {
+    .header div:first-child {
+        height: 96px;
+    }
     .spin {
         width: 200px;
         height: 200px;

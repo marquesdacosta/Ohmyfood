@@ -4,7 +4,9 @@ $secondary-color : #EAEAEA;
 $text-color : #000000;
 $footer-bg : #353535;
 $btn-color : #9356DC;
+$btn-color-2 : #FF79DA;
 
+@import "./mixins.scss";
 
 * {
     margin: 0;
@@ -24,13 +26,11 @@ a {
 /* LOADER */
 
 .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     height: 100%;
     width: 100%;
     position: fixed;
-    background-color: white;
+    background-color: $primary-color;
     opacity: 0.7;
     inset: 0;
     z-index: 1;
@@ -51,7 +51,7 @@ a {
 
 .spin {
     border-radius: 50%;
-    border: 15px solid black;
+    border: 15px solid $text-color;
     width: 50px;
     height: 50px;
     display: inline-block;
@@ -66,27 +66,27 @@ a {
     height: 50px;
     border: solid 15px transparent;
     border-radius: 50%;
-    border-top-color: #9356DC;
+    border-top-color: $btn-color;
     animation: spinner 1s linear infinite;
 }
 
 @keyframes spinner {
     0% {
         transform: rotate(0deg);
-        border-top-color: #9356DC;
+        border-top-color: $btn-color;
     }
     25% {
-        border-top-color: #FF79DA;
+        border-top-color: $btn-color-2;
     }
     50% {
-        border-top-color: #9356DC;
+        border-top-color: $btn-color;
     }
     75% {
-        border-top-color: #FF79DA;
+        border-top-color: $btn-color-2;
     }
     100% {
         transform: rotate(360deg);
-        border-top-color: #9356DC;
+        border-top-color: $btn-color;
     }
 }
 
@@ -106,9 +106,7 @@ a {
         box-shadow: 0px 2px 4px 0px #00000026;
     }
     div:nth-child(2) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         gap: 17px;
         height: 50px;
         background-color: $secondary-color;
@@ -159,7 +157,7 @@ a {
         margin-top: 23px;
         height: 50px;
         width: 218px;
-        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        background: linear-gradient(193.33deg, $btn-color -11.44%, $btn-color-2 123.93%);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
         border-radius: 25px;
         font-weight: 500;
@@ -214,9 +212,7 @@ a {
     transition: all 300ms linear;
     &__number {
         border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-        display: flex;
+        @include flex-center;
         width: 24px;
         height: 24px;
         box-sizing: border-box;
@@ -280,9 +276,7 @@ a {
             object-fit: cover;
         }
         &__badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex-center;
             position: absolute;
             top: 10px;
             right: 10px;
@@ -311,9 +305,7 @@ a {
             }
         }
         &__like {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-center;
             height: 65px;
             width: 20%;
             position: relative;

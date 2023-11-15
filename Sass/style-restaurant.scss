@@ -5,6 +5,9 @@ $terciary-color : #99E2D0;
 $text-color : #000000;
 $footer-bg : #353535;
 $btn-color : #9356DC;
+$btn-color-2 : #FF79DA;
+
+@import "./mixins.scss";
 
 html {
     overflow-x: hidden;
@@ -43,19 +46,17 @@ hr {
     stop-color: $btn-color;
 }
 .stopcolor-100 {
-    stop-color: #FF79DA;
+    stop-color: $btn-color-2;
 }
 
 /* LOADER */
 
 .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     height: 100%;
     width: 100%;
     position: fixed;
-    background-color: white;
+    background-color: $primary-color;
     opacity: 0.7;
     inset: 0;
     z-index: 1;
@@ -77,7 +78,7 @@ hr {
 
 .spin {
     border-radius: 50%;
-    border: 15px solid black;
+    border: 15px solid $text-color;
     width: 50px;
     height: 50px;
     display: inline-block;
@@ -92,31 +93,31 @@ hr {
     height: 50px;
     border: solid 15px transparent;
     border-radius: 50%;
-    border-top-color: #9356DC;
+    border-top-color: $btn-color;
     animation: spinner 1s linear infinite;
 }
 
 @keyframes spinner {
     0% {
         transform: rotate(0deg);
-        border-top-color: #9356DC;
+        border-top-color: $btn-color;
     }
 
     25% {
-        border-top-color: #FF79DA;
+        border-top-color: $btn-color-2;
     }
 
     50% {
-        border-top-color: #9356DC;
+        border-top-color: $btn-color;
     }
 
     75% {
-        border-top-color: #FF79DA;
+        border-top-color: $btn-color-2;
     }
 
     100% {
         transform: rotate(360deg);
-        border-top-color: #9356DC;
+        border-top-color: $btn-color;
     }
 }
 
@@ -201,7 +202,7 @@ hr {
     &__button {
         cursor: pointer;
         align-self: center;
-        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        background: linear-gradient(193.33deg, $btn-color -11.44%, $btn-color-2 123.93%);
         box-shadow: 0px 4px 10px 0px #00000040;
         border-radius: 25px;
         border: none;
@@ -293,19 +294,17 @@ hr {
         justify-content: center;
         width: 30px;
     }
+    &:hover .card__price {
+        transition: all 500ms;
+    }
+    &:hover .card__check {
+        margin-right: 0px;
+        transition: all 500ms;
+    }
 }
 
 .fa-circle-check {
     color: $primary-color;
-}
-
-.card:hover .card__price {
-    transition: all 500ms;
-}
-
-.card:hover .card__check {
-    margin-right: 0px;
-    transition: all 500ms;
 }
 
 /* FOOTER */ 
